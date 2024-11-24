@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import phoenixLogo from '../assets/images/imagenes/phoenix.svg';
 import CartWidget from './CartWidget';
 
-const NavbarComponent = () => {
+const NavbarComponent = ({ itemCount }) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary roboto-regular">
       <div className="container-fluid">
@@ -27,30 +28,30 @@ const NavbarComponent = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav w-100 mb-2 mb-lg-0 justify-content-end">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Inicio</a>
+              <Link className="nav-link active" to="/">Inicio</Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link active dropdown-toggle"
-                href="#"
+                to="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Productos
-              </a>
+              </Link>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="">Automatización</a></li>
-                <li><a className="dropdown-item" href="">Impresión y Marcaje</a></li>
+                <li><Link className="dropdown-item" to="/category/automatizacion">Automatización</Link></li>
+                <li><Link className="dropdown-item" to="/category/marcaje">Impresión y Marcaje</Link></li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="">Soluciones</a>
+              <Link className="nav-link active" to="#">Soluciones</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="">Contacto</a>
+              <Link className="nav-link active" to="#">Contacto</Link>
             </li>
-            <CartWidget itemCount={3} />
+            <CartWidget itemCount={itemCount} />
           </ul>
         </div>
       </div>
@@ -59,3 +60,4 @@ const NavbarComponent = () => {
 };
 
 export default NavbarComponent;
+

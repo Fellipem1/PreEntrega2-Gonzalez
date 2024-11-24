@@ -1,19 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './app.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavbarComponent from './components/NavbarComponent';
-
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cartItems, setCartItems] = useState(0);
+
+  const addToCart = (quantity) => {
+    setCartItems(cartItems + quantity);
+  };
+
+  const removeFromCart = (quantity) => {
+    setCartItems(Math.max(0, cartItems - quantity));
+  };
 
   return (
-    <div>
-      <NavbarComponent />
-      <h1>Bienvenido a la Shop de Phoenix Contact</h1>
-    </div>
+    <Router>
+      <div>
+        <NavbarComponent itemCount={cartItems} />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:id" element={<ItemListContainer />} />
+          <Route 
+            path="/item/:id" 
+            element={<ItemDetailContainer addToCart={addToCart} removeFromCart={removeFromCart} />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
-export default App
+export default App;
+
