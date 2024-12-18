@@ -1,13 +1,25 @@
 import React from 'react';
-import cartIcon from '../assets/images/imagenes/cart.svg';
+import { Link } from 'react-router-dom';
 
 const CartWidget = ({ itemCount }) => {
   return (
     <div className="cart-widget">
-      <img src={cartIcon} alt="Carrito de Compras" className="cart-icon" />
-      <span className="cart-count">{itemCount}</span>
+      <Link to="/checkout">
+        <img src="/images/cart.svg" alt="Carrito" className="cart-icon" />
+      </Link>
+      {itemCount > 0 && <span className="cart-count">{itemCount}</span>}
     </div>
   );
 };
 
 export default CartWidget;
+
+
+
+
+
+
+
+
+
+

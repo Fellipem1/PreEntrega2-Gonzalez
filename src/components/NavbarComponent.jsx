@@ -42,14 +42,8 @@ const NavbarComponent = ({ itemCount }) => {
               </Link>
               <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" to="/category/automatizacion">Automatización</Link></li>
-                <li><Link className="dropdown-item" to="/category/marcaje">Impresión y Marcaje</Link></li>
+                <li><Link className="dropdown-item" to="/category/marcaje">Marcaje</Link></li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link active" to="#">Soluciones</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link active" to="#">Contacto</Link>
             </li>
             <CartWidget itemCount={itemCount} />
           </ul>
@@ -60,4 +54,8 @@ const NavbarComponent = ({ itemCount }) => {
 };
 
 export default NavbarComponent;
+
+
+
+
 

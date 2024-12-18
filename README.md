@@ -1,8 +1,30 @@
-# React + Vite
+# Phoenix Contact Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Phoenix Contact Shop es un proyecto desarrollado en **React + Vite** donde se pueden encontrar y comprar productos relacionados con **Automatización** y **Marcaje**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
+- **React**: Biblioteca para construir interfaces de usuario.
+- **Vite**: Herramienta de construcción rápida y moderna.
+- **CSS**: Para el diseño y estilo de la interfaz.
+- **React Router**: Para manejar la navegación entre las diferentes secciones.
+
+---
+
+## Sobre la tienda
+En la tienda Phoenix Contact Shop, encontrarás:
+1. **Productos de Automatización**:
+   - Controladores PLC de alta calidad.
+2. **Productos de Marcaje**:
+   - Impresoras de etiquetas y soluciones de marcaje.
+
+---
+
+## Comprar
+
+Para empezar a comprar, solo selecciona los productos que te interesen, agrégalos al carrito y finaliza tu compra de forma sencilla y rápida.
+
+### Vista previa de la tienda:
+![Phoenix Contact Shop](gif/Phoenix-Contact-Shop.gif)
+
